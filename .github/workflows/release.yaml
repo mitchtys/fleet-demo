@@ -25,7 +25,7 @@ jobs:
       - name: Build development image
         uses: docker/build-push-action@v2
         with:
-          tags: ghcr.io/mitchtys/fleet-demo:v1
+          tags: ghcr.io/mitchtys/fleet-demo:v2
           context: flask
           pull: true
           load: true
@@ -33,4 +33,4 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
       - name: Push development image
         if: ${{ github.event_name == 'push' }}
-        run: docker push ghcr.io/mitchtys/fleet-demo:v1
+        run: docker push ghcr.io/mitchtys/fleet-demo:v2
