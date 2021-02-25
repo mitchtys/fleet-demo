@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  selector:
+    matchLabels:
+      app: fleet-demo
+      tier: frontend
+  replicas: {{ .Values.replicas }}
+  template:
+    metadata:
+      labels:
+        app: fleet-demo
+        tier: frontend
+    spec:
+      containers:
+      - name: fleet-demo
+        image: ghcr.io/mitchtys/fleet-demo:dev
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 80
