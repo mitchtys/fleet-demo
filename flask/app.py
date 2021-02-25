@@ -15,7 +15,7 @@ def hits():
     return f"Hits counter: {hits}"
 
 if __name__ == "__main__":
-    print("main()")
+    print("main(v2)")
     master.set('hits', 0)
     print("run()")
     app.run(host='0.0.0.0', port=80)
