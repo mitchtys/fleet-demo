@@ -1,5 +1,5 @@
 apiVersion: v2
-name: demo
-description: Sample application
+name: fleet-demo
+description: Simple Flask demo app
 version: 0.0.0
 appVersion: 0.0.0

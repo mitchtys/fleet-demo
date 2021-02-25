@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fleet-demo
-        image: ghcr.io/mitchtys/fleet-demo:dev
+        image: ghcr.io/mitchtys/fleet-demo:v1
         resources:
           requests:
             cpu: 100m
